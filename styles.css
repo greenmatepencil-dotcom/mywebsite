@@ -297,6 +297,53 @@ nav a.nav-cta {
   margin: 1.2rem 0 2rem;
 }
 
+.eyebrow {
+  color: var(--sun);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.hero-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  max-width: 840px;
+  margin: 0 0 2rem;
+}
+
+.choice {
+  display: block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.choice:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.choice strong {
+  display: block;
+  font-family: var(--head);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.choice span {
+  display: block;
+  color: #cfe3d6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .btns {
   display: flex;
   gap: 14px;

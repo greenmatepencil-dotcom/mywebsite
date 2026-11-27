@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9C%8F%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contact and Enquiry | GreenMate Pencils, Sivakasi</title>
 <meta name="description" content="Contact GreenMate Pencils in Sivakasi for paper pencils, seed pencils, paper pens and pencil making machines. Call or WhatsApp +91 99943 93711, 9 AM to 6 PM.">
@@ -22,7 +22,7 @@
 <body>
 <header><div class="wrap nav">
 <a class="logo" href="index.html"><i></i>GreenMate Pencils</a>
-<nav aria-label="Main"><a href="index.html">Home</a><a href="products.html">Products</a><a href="machinery.html">Machinery</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="#enquiry">Get a quote</a></nav>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="products.html">Products</a><a href="machinery.html">Machinery</a><a href="export.html">Export</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="#enquiry">Get a quote</a></nav>
 </div></header>
 
 <main>
@@ -45,12 +45,14 @@
 <form id="enquiry">
 <h2>Send an enquiry</h2>
 <label for="n">Your name</label><input id="n" autocomplete="name" required>
-<label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel" required>
+<label for="e">Email address</label><input id="e" type="email" autocomplete="email" required>
+<label for="p">Phone / WhatsApp number</label><input id="p" type="tel" autocomplete="tel" required>
+<label for="c">Country</label><input id="c" autocomplete="country-name" placeholder="e.g. Kenya, Germany, Sri Lanka">
 <label for="pr">I am interested in</label>
 <select id="pr"><option value="pencil">Newspaper pencil</option><option>Seed pencil</option><option>Coloured pencil</option><option>White upcycled pencil</option><option>Custom logo pencil</option><option>Paper pen</option><option value="machine">Paper pencil making machine</option><option>Raw materials</option></select>
-<label for="q">Quantity and details</label><textarea id="q" rows="4" placeholder="For machines: your country, power supply and daily output"></textarea>
-<button class="btn btn-green" type="submit">Send on WhatsApp</button>
-<p class="note">This opens WhatsApp with your message ready to send.</p>
+<label for="q">Quantity and details</label><textarea id="q" rows="4" placeholder="For pencils: quantity, size, logo and delivery city. For machines: daily output, power supply and floor area."></textarea>
+<div class="btns"><button class="btn btn-green" type="submit">Send on WhatsApp</button><button class="btn btn-ghost" type="button" id="emailBtn">Send by email</button></div>
+<p class="note">WhatsApp opens with your message ready to send. Email opens your mail app. We reply within one working day.</p>
 </form>
 </div></section>
 </main>
@@ -58,17 +60,27 @@
 <footer><div class="wrap">
 <div><strong>GreenMate Pencils</strong><br>Paper pencils, seed pencils, paper pens and machinery.<br>6/7212, Meenakshi Colony 1st Street,<br>Naranapuram Road, Sivakasi,<br>Tamil Nadu 626189</div>
 <div><strong>Contact</strong><br>Phone / WhatsApp: <a href="tel:+919994393711">+91 99943 93711</a><br>Email: <a href="mailto:hi@greenmatepencil.in">hi@greenmatepencil.in</a><br>9 AM to 6 PM, except govt holidays</div>
-<div><strong>Pages</strong><br><a href="index.html">Home</a><br><a href="products.html">Products</a><br><a href="machinery.html">Machinery</a><br><a href="contact.html">Contact and enquiry</a></div>
+<div><strong>Pages</strong><br><a href="index.html">Home</a><br><a href="products.html">Products</a><br><a href="machinery.html">Machinery</a><br><a href="export.html">Export &amp; ordering</a><br><a href="contact.html">Contact and enquiry</a><br><a href="penandpencil.pdf" target="_blank" rel="noopener">Catalogue (PDF)</a></div>
 </div><div class="wrap copy">&copy; GreenMate Pencils, Sivakasi. All rights reserved.</div></footer>
 <a class="wa" href="https://wa.me/919994393711" aria-label="Chat on WhatsApp">WhatsApp</a>
 <script>
 var t=new URLSearchParams(location.search).get('type');
 if(t==='machine'){document.getElementById('pr').value='machine';}
-document.getElementById('enquiry').addEventListener('submit',function(e){
-  e.preventDefault();
-  var s=document.getElementById('pr'),label=s.options[s.selectedIndex].text;
-  var msg='Hello GreenMate Pencils, I have an enquiry.\nName: '+n.value+'\nPhone: '+p.value+'\nInterested in: '+label+'\nDetails: '+q.value;
-  window.open('https://wa.me/919994393711?text='+encodeURIComponent(msg),'_blank');
+function enquiryMessage(){
+  var sel=document.getElementById('pr'), label=sel.options[sel.selectedIndex].text;
+  return 'Hello GreenMate Pencils, I have an enquiry.\nName: '+document.getElementById('n').value+
+    '\nEmail: '+document.getElementById('e').value+
+    '\nPhone: '+document.getElementById('p').value+
+    '\nCountry: '+document.getElementById('c').value+
+    '\nInterested in: '+label+
+    '\nDetails: '+document.getElementById('q').value;
+}
+document.getElementById('enquiry').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  window.open('https://wa.me/919994393711?text='+encodeURIComponent(enquiryMessage()),'_blank');
+});
+document.getElementById('emailBtn').addEventListener('click',function(){
+  window.location.href='mailto:hi@greenmatepencil.in?subject='+encodeURIComponent('Enquiry - GreenMate Pencils')+'&body='+encodeURIComponent(enquiryMessage());
 });
 </script>
 </body>
