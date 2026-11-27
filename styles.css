@@ -1078,3 +1078,49 @@ footer .copy {
 .gm-box iframe{width:100%;height:min(70vh,520px);border:0;display:block}
 footer .google-links{margin-top:14px;color:#cfe3d6;font-size:.88rem;text-align:center}
 footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
+
+/* Social follow strip */
+.follow-wrap {
+  margin-top: 18px;
+  text-align: center;
+}
+.follow-wrap > strong {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.follow-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 16px;
+}
+.follow-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #cfe3d6;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.follow-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.follow-links .ico {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.ico-g { background: #4285f4; }
+.ico-w { background: #25d366; }
+.ico-ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); font-size: 0.62rem; }
+.ico-fb { background: #1877f2; font-size: 1rem; }
+.ico-yt { background: #ff0000; font-size: 0.7rem; }

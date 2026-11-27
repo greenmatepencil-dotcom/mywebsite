@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded',function(){
  document.querySelectorAll('a[href$=".pdf"]').forEach(function(el){el.addEventListener('click',function(){trackGM('catalogue_download',{file:'penandpencil.pdf'});});});
  document.querySelectorAll('a[href="export.html"],a[href="/export.html"]').forEach(function(el){el.addEventListener('click',function(){trackGM('export_link_click');});});
  document.querySelectorAll('.inline-video').forEach(function(el){el.addEventListener('click',function(){trackGM('machine_video_play',{video_id:this.getAttribute('data-yt')||''});});});
+ document.querySelectorAll('a[href*="instagram.com"],a[href*="facebook.com"],a[href*="youtube.com"]').forEach(function(el){el.addEventListener('click',function(){var h=this.href,p=h.indexOf('instagram')>-1?'instagram':(h.indexOf('facebook')>-1?'facebook':'youtube');trackGM('social_click',{platform:p});});});
  var m=document.getElementById('reviewModal'),f=document.getElementById('reviewFrame');
  function openM(){if(!m||!f)return;f.src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15742.717628369504!2d77.79840944209933!3d9.44948525069722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06ceec23ecb1d7%3A0x977c696b28a32d80!2sGreenmate%20pencil!5e0!3m2!1sen!2sin!4v1795756603106!5m2!1sen!2sin';m.hidden=false;document.body.style.overflow='hidden';}
  function closeM(){if(!m||!f)return;m.hidden=true;f.src='about:blank';document.body.style.overflow='';}
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <a class="btn btn-sun" href="contact.html?type=machine#enquiry">Request Machine Quotation</a>
         <a class="btn btn-line" href="export.html">Export &amp; ordering info</a>
         <a class="btn btn-line" href="penandpencil.pdf" target="_blank" rel="noopener">Download catalogue</a>
+        <a class="btn btn-line" href="https://m.youtube.com/@greenmatepencil" target="_blank" rel="noopener">Watch all demos on YouTube</a>
       </div>
     </div>
   </section>
@@ -414,7 +416,7 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
   </div>
   <div class="wrap copy">&copy; GreenMate Pencils, Sivakasi. All rights reserved.</div>
-<div class="gwrap google-links">See us on Google &amp; write a review: <a href="https://maps.app.goo.gl/Keg3xTbcQyRVoyA96?g_st=ac" target="_blank" rel="noopener">GreenMate on Google ↗</a></div></footer>
+<div class="gwrap follow-wrap"><strong>Find GreenMate online</strong><div class="follow-links"><a href="https://maps.app.goo.gl/Keg3xTbcQyRVoyA96?g_st=ac" target="_blank" rel="noopener"><span class="ico ico-g">G</span>Google</a><a href="https://wa.me/919994393711" target="_blank" rel="noopener"><span class="ico ico-w">W</span>WhatsApp</a><a href="https://www.instagram.com/greenmatepencil/" target="_blank" rel="noopener"><span class="ico ico-ig">IG</span>Instagram</a><a href="https://www.facebook.com/greenmatepencilindustry" target="_blank" rel="noopener"><span class="ico ico-fb">f</span>Facebook</a><a href="https://m.youtube.com/@greenmatepencil" target="_blank" rel="noopener"><span class="ico ico-yt">▶</span>YouTube</a></div></div></footer>
 
 <a class="wa" href="https://wa.me/919994393711?text=Hi%20GreenMate,%20I%20have%20an%20enquiry" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">WhatsApp</a>
 
