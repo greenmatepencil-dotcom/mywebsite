@@ -199,25 +199,7 @@ header {
   letter-spacing: -0.02em;
 }
 
-.logo i {
-  display: block;
-  width: 26px;
-  height: 10px;
-  background: var(--sun);
-  border-radius: 2px 5px 5px 2px;
-  position: relative;
-  margin-left: 7px;
-}
 
-.logo i:before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 0;
-  border-right: 7px solid #e8c9a0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-}
 
 .logo-mark {
   display: inline-grid;
@@ -346,43 +328,10 @@ nav a.nav-cta {
   margin-bottom: 0.7rem;
 }
 
-.hero-choices {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 14px;
-  max-width: 840px;
-  margin: 0 0 2rem;
-}
 
-.choice {
-  display: block;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 14px;
-  padding: 16px 18px;
-  text-decoration: none;
-  color: #fff;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
 
-.choice:hover {
-  background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-2px);
-}
 
-.choice strong {
-  display: block;
-  font-family: var(--head);
-  font-size: 1.05rem;
-  margin-bottom: 4px;
-}
 
-.choice span {
-  display: block;
-  color: #cfe3d6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
 
 .btns {
   display: flex;
@@ -456,30 +405,8 @@ nav a.nav-cta {
   box-shadow: var(--shadow-md);
 }
 
-.ph {
-  aspect-ratio: 4/3;
-  background: linear-gradient(135deg, #dfe8dc, #c7d8c8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #44604d;
-  font-size: 0.9rem;
-  position: relative;
-  overflow: hidden;
-}
 
-.ph img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
 
-.card:hover .ph img {
-  transform: scale(1.03);
-}
 
 .tx {
   padding: 22px;
@@ -944,20 +871,8 @@ form .btn {
 }
 
 /* VIDEO GRID & DETAILS */
-.dark {
-  background: var(--forest);
-  color: #fff;
-}
 
-.dark .lead {
-  color: #cfe3d6;
-}
 
-.vgrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 24px;
-}
 
 .video {
   position: relative;
@@ -1012,32 +927,9 @@ form .btn {
   border: 0;
 }
 
-.vitem h3 {
-  margin-top: 1rem;
-  color: #fff;
-}
 
-.vitem p {
-  color: #cfe3d6;
-  font-size: 0.95rem;
-}
 
-.illus {
-  width: 100%;
-  aspect-ratio: 9/16;
-  border-radius: 14px;
-  background: #1d5a40;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-}
 
-.illus svg {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-}
 
 details {
   border-bottom: 1px solid var(--line);
@@ -1295,8 +1187,6 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
 
   .hero { padding-top: 34px; }
   .hero p { font-size: 1rem; margin: 0.85rem 0 1.3rem; }
-  .hero-choices { gap: 10px; margin-bottom: 1.3rem; }
-  .choice { padding: 12px 14px; }
   .pencil { height: 44px; margin: 36px -24px 0; top: 12px; }
 
   .rail { padding: 2px 16px 10px; gap: 10px; }
