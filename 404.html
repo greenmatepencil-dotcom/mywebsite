@@ -5,7 +5,28 @@
 <title>Page not found | GreenMate Pencils</title>
 <meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css"></head>
+<link rel="stylesheet" href="/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZPM1YNXT2"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-1ZPM1YNXT2');
+function trackGM(n,p){if(typeof gtag==='function')gtag('event',n,p||{});}
+document.addEventListener('DOMContentLoaded',function(){
+ document.querySelectorAll('a[href*="wa.me"]').forEach(function(el){el.addEventListener('click',function(){trackGM('whatsapp_click',{link_url:this.href});});});
+ document.querySelectorAll('a[href^="tel:"]').forEach(function(el){el.addEventListener('click',function(){trackGM('phone_click',{phone:this.getAttribute('href')});});});
+ document.querySelectorAll('a[href$=".pdf"]').forEach(function(el){el.addEventListener('click',function(){trackGM('catalogue_download',{file:'penandpencil.pdf'});});});
+ document.querySelectorAll('a[href="export.html"],a[href="/export.html"]').forEach(function(el){el.addEventListener('click',function(){trackGM('export_link_click');});});
+ document.querySelectorAll('.inline-video').forEach(function(el){el.addEventListener('click',function(){trackGM('machine_video_play',{video_id:this.getAttribute('data-yt')||''});});});
+ var m=document.getElementById('reviewModal'),f=document.getElementById('reviewFrame');
+ function openM(){if(!m||!f)return;f.src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15742.717628369504!2d77.79840944209933!3d9.44948525069722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06ceec23ecb1d7%3A0x977c696b28a32d80!2sGreenmate%20pencil!5e0!3m2!1sen!2sin!4v1795756603106!5m2!1sen!2sin';m.hidden=false;document.body.style.overflow='hidden';}
+ function closeM(){if(!m||!f)return;m.hidden=true;f.src='about:blank';document.body.style.overflow='';}
+ var ob=document.getElementById('reviewOpen');if(ob)ob.addEventListener('click',openM);
+ if(m)m.addEventListener('click',function(e){if(e.target.getAttribute('data-gmclose'))closeM();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m&&!m.hidden)closeM();});
+});
+</script>
+</head>
 <body>
 <header><div class="wrap nav"><a class="logo" href="/index.html"><i></i>GreenMate Pencils</a><nav aria-label="Main"><a href="/index.html">Home</a><a href="/products.html">Products</a><a href="/machinery.html">Machinery</a><a href="/export.html">Export</a><a href="/contact.html">Contact</a><a class="nav-cta" href="/contact.html#enquiry">Get a quote</a></nav></div></header>
 <main><section class="hero" style="padding-bottom:64px"><div class="wrap"><h1>Page not found</h1><p>This page does not exist. Use the menu above, or go back to the home page.</p><div class="btns"><a class="btn btn-sun" href="/index.html">Go to home</a><a class="btn btn-line" href="/products.html">See products</a></div></div></section></main>
@@ -13,5 +34,5 @@
 <div><strong>GreenMate Pencils</strong><br>Paper pencils, seed pencils, paper pens and machinery.<br>6/7212, Meenakshi Colony 1st Street,<br>Naranapuram Road, Sivakasi,<br>Tamil Nadu 626189</div>
 <div><strong>Contact</strong><br>Phone / WhatsApp: <a href="tel:+919994393711">+91 99943 93711</a><br>Email: <a href="mailto:hi@greenmatepencil.in">hi@greenmatepencil.in</a><br>9 AM to 6 PM, except govt holidays</div>
 <div><strong>Pages</strong><br><a href="/index.html">Home</a><br><a href="/products.html">Products</a><br><a href="/machinery.html">Machinery</a><br><a href="/export.html">Export &amp; ordering</a><br><a href="/contact.html">Contact and enquiry</a><br><a href="/penandpencil.pdf" target="_blank" rel="noopener">Catalogue (PDF)</a></div>
-</div><div class="wrap copy">&copy; GreenMate Pencils, Sivakasi. All rights reserved.</div></footer>
+</div><div class="wrap copy">&copy; GreenMate Pencils, Sivakasi. All rights reserved.</div><div class="gwrap google-links">See us on Google &amp; write a review: <a href="https://maps.app.goo.gl/Keg3xTbcQyRVoyA96?g_st=ac" target="_blank" rel="noopener">GreenMate on Google ↗</a></div></footer>
 </body></html>

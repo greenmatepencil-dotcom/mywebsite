@@ -1054,3 +1054,27 @@ footer .copy {
   border-bottom-width: 9px;
   margin-left: 4px;
 }
+
+/* Google reviews card + modal */
+.review-card{display:flex;flex-direction:column;gap:8px;width:100%;max-width:720px;text-align:left;background:#fff;border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;cursor:pointer;box-shadow:var(--shadow-md);font:inherit;color:var(--ink);transition:transform .2s ease,box-shadow .2s ease}
+.review-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,64,44,.18)}
+.review-badge{align-self:flex-start;background:var(--leaf);color:#fff;border-radius:999px;padding:4px 10px;font-size:.72rem;font-weight:700;letter-spacing:.08em}
+.review-card>strong{font-family:var(--head);font-size:1.25rem}
+.review-card>span:not(.review-badge){color:var(--soft);font-size:.95rem;line-height:1.5}
+.review-actions{color:var(--leaf)!important;font-weight:600;margin-top:4px}
+.review-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;max-width:720px}
+.review-links a{color:var(--leaf);font-weight:600;text-decoration:underline}
+.gm-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:18px}
+.gm-modal[hidden]{display:none}
+.gm-backdrop{position:absolute;inset:0;background:rgba(7,32,19,.72);backdrop-filter:blur(3px)}
+.gm-box{position:relative;width:min(760px,100%);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.gm-head,.gm-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
+.gm-head{background:var(--leaf);color:#fff}
+.gm-head strong{font-family:var(--head)}
+.gm-head button,.gm-foot button{background:transparent;border:1px solid rgba(46,125,79,.4);color:var(--leaf);border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit}
+.gm-head button{border-color:rgba(255,255,255,.5);color:#fff}
+.gm-foot{background:var(--leaf-light);color:var(--leaf)}
+.gm-foot a{color:var(--leaf);font-weight:600}
+.gm-box iframe{width:100%;height:min(70vh,520px);border:0;display:block}
+footer .google-links{margin-top:14px;color:#cfe3d6;font-size:.88rem;text-align:center}
+footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
