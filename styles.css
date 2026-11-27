@@ -1077,19 +1077,24 @@ details p {
   position: fixed;
   right: 20px;
   bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 50%;
   background: #25d366;
   color: #fff;
   text-decoration: none;
-  font-family: var(--head);
-  font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 50px;
   box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
   z-index: 60;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: grid;
+  place-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa svg {
+  display: block;
+  width: 26px;
+  height: 26px;
 }
 
 .wa:hover {
@@ -1316,6 +1321,28 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
   .faqs > div:last-child {
     grid-column: 1 / -1;
   }
+}
+
+/* Desktop header: logo + company first row, tabs second row */
+@media (min-width: 769px) {
+  .nav {
+    justify-content: flex-start;
+    gap: 10px 20px;
+    padding: 14px 0 10px;
+  }
+  .logo { width: 100%; }
+  nav { width: 100%; justify-content: flex-start; }
+}
+
+/* Phone WhatsApp icon-only button */
+@media (max-width: 600px) {
+  .wa {
+    width: 46px;
+    height: 46px;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+  .wa svg { width: 22px; height: 22px; }
 }
 
 
