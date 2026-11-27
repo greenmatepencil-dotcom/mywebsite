@@ -172,9 +172,6 @@ section {
 
 /* HEADER & NAVBAR */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
   background: var(--forest);
   color: #fff;
   padding-top: env(safe-area-inset-top, 0px);
@@ -233,11 +230,17 @@ header {
   flex: 0 0 auto;
 }
 
-.logo-mark img,
+.logo-mark img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 .footer-logo img {
   display: block;
-  width: auto;
-  height: 100%;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -1258,6 +1261,7 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
 
   .logo { font-size: 1.05rem; }
   .logo-mark { width: 16px; height: 16px; padding: 1px; border-radius: 4px; }
+  .logo-mark img { width: 14px; height: 14px; }
 
   .hero { padding-top: 40px; }
   .hero p { font-size: 1rem; margin: 0.85rem 0 1.3rem; }
