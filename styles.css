@@ -1309,3 +1309,15 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
   .review-card { padding: 16px; }
   .review-links { gap: 10px; }
 }
+
+/* Phone and tablet nav: two tidy rows, no horizontal swipe */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+  nav a { flex: 0 0 auto; }
+  html { scroll-padding-top: 150px; }
+}
