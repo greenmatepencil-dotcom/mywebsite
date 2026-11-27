@@ -1262,21 +1262,21 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
 /* Footer navigation: centered single row above social icons */
 .footer-nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 8px 18px;
+  gap: 8px 14px;
   margin-top: 18px;
   padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.92rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 .footer-nav a:hover { color: #fff; }
 @media (max-width: 600px) {
   .footer-nav {
-    flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
-    white-space: nowrap;
     padding-bottom: 6px;
     scrollbar-width: none;
   }
