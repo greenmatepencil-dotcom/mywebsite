@@ -96,7 +96,7 @@ a {
 }
 
 section {
-  padding: 76px 0;
+  padding: 58px 0;
 }
 
 .alt {
@@ -106,7 +106,7 @@ section {
 .lead {
   color: var(--soft);
   font-size: 1.1rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* BUTTONS */
@@ -327,14 +327,14 @@ nav a.nav-cta {
 .hero {
   background: linear-gradient(175deg, var(--forest) 0%, #0d2e1f 100%);
   color: #fff;
-  padding: 72px 0 0;
+  padding: 56px 0 0;
   overflow: hidden;
 }
 
 .hero p {
   color: #cfe3d6;
   font-size: 1.15rem;
-  margin: 1.2rem 0 2rem;
+  margin: 1rem 0 1.4rem;
 }
 
 .eyebrow {
@@ -386,14 +386,14 @@ nav a.nav-cta {
 
 .btns {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .pencil {
   display: flex;
   align-items: center;
-  margin: 64px -40px 0;
+  margin: 46px -40px 0;
   transform: rotate(-3deg);
   height: 60px;
   position: relative;
@@ -505,9 +505,9 @@ nav a.nav-cta {
 .prod {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: 44px;
+  gap: 32px;
   align-items: center;
-  padding: 50px 0;
+  padding: 38px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -721,7 +721,7 @@ nav a.nav-cta {
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  gap: 20px;
   list-style: none;
   counter-reset: s;
 }
@@ -730,7 +730,7 @@ nav a.nav-cta {
   background: var(--card-bg);
   border: 2px dashed var(--line);
   border-radius: 20px;
-  padding: 24px 20px;
+  padding: 20px 16px;
   text-align: center;
   counter-increment: s;
   position: relative;
@@ -772,14 +772,14 @@ nav a.nav-cta {
 .why {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 26px;
+  gap: 18px;
 }
 
 .why div {
   background: var(--card-bg);
   border: 1px solid var(--line);
   border-top: 4px solid var(--sun);
-  padding: 22px;
+  padding: 18px;
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
 }
@@ -1106,14 +1106,14 @@ details p {
 footer {
   background: var(--forest);
   color: #cfe3d6;
-  padding: 48px 0 calc(36px + env(safe-area-inset-bottom, 0px));
+  padding: 36px 0 calc(24px + env(safe-area-inset-bottom, 0px));
   font-size: 0.94rem;
 }
 
 footer .wrap {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 32px;
+  gap: 24px;
 }
 
 footer a {
@@ -1135,8 +1135,8 @@ footer strong {
 
 footer .copy {
   display: block;
-  margin-top: 32px;
-  padding-top: 22px;
+  margin-top: 22px;
+  padding-top: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   font-size: 0.88rem;
   color: #a3c2b0;
@@ -1208,7 +1208,7 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
 
 /* Social follow strip */
 .follow-wrap {
-  margin-top: 18px;
+  margin-top: 12px;
   text-align: center;
 }
 .follow-wrap > strong {
@@ -1259,16 +1259,40 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
 .follow-links a:hover .ico { transform: translateY(-2px); }
 .inline-follow { justify-content: flex-start; margin-top: 6px; }
 
+/* Footer navigation: centered single row above social icons */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-weight: 600;
+}
+.footer-nav a:hover { color: #fff; }
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+  .footer-nav::-webkit-scrollbar { display: none; }
+}
+
 /* Mobile compaction: keep all content, cut empty space */
 @media (max-width: 600px) {
   .wrap { padding: 0 16px; }
-  section { padding: 36px 0; }
+  section { padding: 30px 0; }
 
   .logo { font-size: 1.05rem; }
   .logo-mark { width: 16px; height: 16px; padding: 1px; border-radius: 4px; }
   .logo-mark img { width: 14px; height: 14px; }
 
-  .hero { padding-top: 40px; }
+  .hero { padding-top: 34px; }
   .hero p { font-size: 1rem; margin: 0.85rem 0 1.3rem; }
   .hero-choices { gap: 10px; margin-bottom: 1.3rem; }
   .choice { padding: 12px 14px; }
@@ -1296,10 +1320,10 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
   summary { font-size: 1rem; }
   details p { font-size: 0.92rem; }
 
-  footer { padding-top: 32px; }
+  footer { padding-top: 26px; }
   footer .wrap { gap: 18px; }
   footer .copy { margin-top: 20px; padding-top: 16px; }
-  .follow-wrap { margin-top: 14px; }
+  .follow-wrap { margin-top: 10px; }
   .follow-wrap > strong { margin-bottom: 8px; font-size: 0.82rem; }
   .follow-links { gap: 8px; }
   .follow-links .ico { width: 40px; height: 40px; font-size: 0.78rem; }
