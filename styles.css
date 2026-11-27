@@ -1067,7 +1067,7 @@ footer .copy {
 .gm-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:18px}
 .gm-modal[hidden]{display:none}
 .gm-backdrop{position:absolute;inset:0;background:rgba(7,32,19,.72);backdrop-filter:blur(3px)}
-.gm-box{position:relative;width:min(760px,100%);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);display:flex;flex-direction:column}
+.gm-box{position:relative;width:min(900px,100%);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);display:flex;flex-direction:column}
 .gm-head,.gm-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
 .gm-head{background:var(--leaf);color:#fff}
 .gm-head strong{font-family:var(--head)}
@@ -1075,7 +1075,8 @@ footer .copy {
 .gm-head button{border-color:rgba(255,255,255,.5);color:#fff}
 .gm-foot{background:var(--leaf-light);color:var(--leaf)}
 .gm-foot a{color:var(--leaf);font-weight:600}
-.gm-box iframe{width:100%;height:min(70vh,520px);border:0;display:block}
+.gm-foot .read-all-reviews{background:var(--leaf);color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+.gm-box iframe{width:100%;height:min(82vh,680px);border:0;display:block}
 footer .google-links{margin-top:14px;color:#cfe3d6;font-size:.88rem;text-align:center}
 footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
 
