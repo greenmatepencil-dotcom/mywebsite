@@ -1301,4 +1301,17 @@ footer .google-links a{color:#cfe3d6;font-weight:600;text-decoration:underline}
   .review-links { gap: 10px; }
 }
 
+/* FAQ groups: two columns on desktop, stacked on phone/tablet */
+@media (min-width: 769px) {
+  .faqs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 36px;
+    align-items: start;
+  }
+  .faqs > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
 
